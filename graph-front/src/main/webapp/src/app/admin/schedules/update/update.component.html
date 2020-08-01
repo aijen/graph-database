@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>label</mat-label>
+    <input matInput [(ngModel)]="data.label">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>cron</mat-label>
+    <input matInput [(ngModel)]="data.cron">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>date planifier</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.lastUpdate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.label" cdkFocusInitial>Ok</button>
+</div>
+

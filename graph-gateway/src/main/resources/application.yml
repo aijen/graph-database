@@ -1,0 +1,11 @@
+server:
+  port: 9999
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+
+  application:
+    name: GateWay-MicroService
+

@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-raised-button.mat-update {
+  color: #000000;
+  background-color: #ffc520;
+}

@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: mysql µService
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://172.17.0.2:3306/graphdb?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
