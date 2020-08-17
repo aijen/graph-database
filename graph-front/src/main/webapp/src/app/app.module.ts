@@ -8,7 +8,13 @@ import { SharedModule} from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule} from "./angular-material.module";
 import {AdminModule} from "./admin/admin.module";
-import {HttpClientModule} from "@angular/common/http";
+import { StoreModule, MetaReducer, ActionReducer, State } from '@ngrx/store';
+import { environment } from 'src/environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { CoreModule } from '@angular/flex-layout';
+
+
+export const metaReducers: MetaReducer<any, any>[] = environment.production ? [] : [];
 
 @NgModule({
   declarations: [
@@ -22,7 +28,9 @@ import {HttpClientModule} from "@angular/common/http";
     SharedModule,
     BrowserAnimationsModule,
     AdminModule,
-    HttpClientModule
+    StoreModule.forRoot({}, {metaReducers}),
+    EffectsModule.forRoot([]),
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

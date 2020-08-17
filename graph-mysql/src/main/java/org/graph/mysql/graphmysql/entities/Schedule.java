@@ -2,7 +2,9 @@ package org.graph.mysql.graphmysql.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +17,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Schedule implements Serializable {
 
     @Id
@@ -24,4 +27,8 @@ public class Schedule implements Serializable {
     private String cron;
     private LocalDateTime lastUpdate;
     private LocalDateTime nextUpdate;
+
+
+    
+    
 }

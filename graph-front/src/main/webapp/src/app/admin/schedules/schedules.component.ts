@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {WebService} from "../../core/service/web.service";
 import {map} from "rxjs/operators";
 import {MatTableDataSource} from "@angular/material/table";
 import {Schedule} from "../../core/module/schedule";
@@ -19,20 +18,12 @@ export class SchedulesComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor(
-    private webService: WebService,
     public dialog: MatDialog
   ) {
   }
 
   ngOnInit(): void {
-    this.webService.getSchedules()
-      .pipe(
-        map(data=>data._embedded.schedules.map(sc=>this.asSchedule(sc)))
-      )
-      .subscribe(
-        data =>  this.buildTable(data) ,
-        error => console.log(error)
-      );
+    
   }
 
   private buildTable(data:Schedule[]){

@@ -24,7 +24,9 @@ public class GraphMysqlApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        for(int i=0;i<100;i++)
+        
+    	for(int i=0;i<101;i++)
             scheduleRepository.save(new Schedule(i*1L,"country"+i, "* * * * *", LocalDateTime.now(), LocalDateTime.now()));
+
     }
 }

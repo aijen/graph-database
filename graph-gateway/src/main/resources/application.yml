@@ -7,5 +7,5 @@ spring:
       enabled: true
 
   application:
-    name: GateWay-MicroService
+    name: graph-gateway
 

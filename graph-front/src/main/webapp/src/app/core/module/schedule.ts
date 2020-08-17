@@ -1,9 +1,11 @@
+import { Moment } from 'moment';
+
 export interface Schedule {
 
-  id: Number;
+  id: number;
   label: string,
   cron: string;
-  lastUpdate: Date;
-  nextUpdate: Date;
+  lastUpdate: Moment;
+  nextUpdate: Moment;
 
 }
