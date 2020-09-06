@@ -26,9 +26,6 @@ public class Schedule implements Serializable {
     private String label;
     private String cron;
     private LocalDateTime lastUpdate;
-    private LocalDateTime nextUpdate;
-
-
-    
+    private LocalDateTime nextUpdate;	
     
 }
